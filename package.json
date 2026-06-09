@@ -6,10 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepare": "husky"
   },
+  
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{jsx,js,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  },
+  
   "dependencies": {
+    "lint-staged": "^17.0.7",
     "next": "16.2.7",
+    "prettier": "^3.8.3",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
