@@ -3,3 +3,4 @@ node_modules/
 .eslintcache
 *.tsbuildinfo
 next-env.d.ts
+pnpm-lock.yaml
